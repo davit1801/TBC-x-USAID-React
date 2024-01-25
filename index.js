@@ -20,6 +20,7 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "flex";
 }
 
+
 function plusSlides(n) {
   showSlides((slideIndex += n));
 }
@@ -31,3 +32,11 @@ prev.addEventListener("click", () => {
 next.addEventListener("click", () => {
   plusSlides(1);
 });
+
+
+// function avtoSlider (btn) {
+//     let click = new CustomEvent ("click");
+//     next.dispatchEvent(click)
+// }
+
+// setInterval(avtoSlider,2000)
