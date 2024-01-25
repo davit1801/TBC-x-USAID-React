@@ -3,6 +3,9 @@ body{
     font-style: normal;
     color: #f4f4f4;
     font-family: 'TBC X';
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
 [class*='__container'] {
@@ -20,10 +23,19 @@ img{
 
 .header{
     background-color: #1a1e1f;
+    background-color: rgba(43, 43,43, 0.95);
     height: 84px;
-    /* position: fixed; */
+    position: fixed;
     width: 100%;
     line-height: 26px;
+    z-index: 1;
+}
+
+.header_background{
+    height: 84px;
+    background-color: #1a1e1f;
+    position: relative;
+    z-index: 11;
 }
 
 .header__container{
@@ -165,7 +177,40 @@ img{
 
 .partners{
     background-color: #2B2B2B;
+    padding: 35px 0;
 }
+
+.partners__container > h3{
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 38px;
+}
+
+.next-slide-arrow{
+    transform: rotate(180deg);
+    /* margin-right: 100px; */
+}
+
+.previous-slide-arrow{
+    /* margin-left: 100px; */
+}
+
+
+
+
+
+.slides{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 225px;
+}
+
+
+
+
+
+
 
 
 .questions{
