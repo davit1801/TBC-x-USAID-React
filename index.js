@@ -40,3 +40,31 @@ next.addEventListener("click", () => {
 // }
 
 // setInterval(avtoSlider,2000)
+
+
+
+
+
+
+
+// header background-color change
+// const header = document.getElementsByClassName('header');
+
+// header.addEventListener('scroll',() => {
+//  header.style.backgroundColor = 'blue'
+// })
+
+
+
+
+window.addEventListener('scroll', function() {
+  if (pageYOffset > 0) {
+    document.querySelector('.header').classList.add('active')
+  } else {
+    document.querySelector('.header').classList.remove('active')
+  }
+})
+
+
+
+

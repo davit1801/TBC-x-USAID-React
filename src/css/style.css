@@ -18,11 +18,11 @@ img {
 }
 
 .trn-text {
-  transition: color 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .header {
-  background-color: rgba(34, 34, 34, 0.95);
+  background-color: #1a1e1f;
   height: 84px;
   position: fixed;
   width: 100%;
@@ -30,9 +30,13 @@ img {
   z-index: 1;
 }
 
+.active {
+  background-color: rgba(34, 34, 34, 0.95);
+}
+
 .header_background {
   height: 84px;
-  background-color: #1a1e1f;
+  background-color: #d5d5d5;
   position: relative;
 }
 
@@ -71,6 +75,7 @@ img {
 .banner {
   background-image: url(../images/background-img.jpg);
   background-size: 100% 100%;
+  background-repeat: no-repeat;
   height: 352px;
 }
 
@@ -226,11 +231,13 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 30px;
 }
 
-.sc-media-logo {
+.sc-media-logoes {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
 }
 
 .rules-contact {
@@ -238,6 +245,44 @@ img {
   justify-content: space-between;
 }
 
+.rules {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  color: #ffffff;
+}
+
+.rules a {
+  color: #ffffff;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+  border-radius: 6px;
+  /* width: 160px;
+  height: 40px; */
+  background-color: #00aef3;
+  color: #ffffff;
+}
+
+.contact > a {
+  color: inherit;
+  padding: 12px 30px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.contact:hover {
+  background-color: #d5d5d5;
+  color: #353131;
+}
+
+.rules a:hover {
+  color: #aaaaaa;
+}
 
 /* .test{
     animation-name: nextSlide;
