@@ -8,4 +8,15 @@
     [class*='__container'] {
         max-width: 400px;
     }
+
+}
+
+@media screen and (max-width:576px){
+    [class*='__container'] {
+        max-width: 280px;
+    }
+
+    .courses{
+        justify-content: center;
+    }
 }
