@@ -53,66 +53,18 @@ next.addEventListener("click", () => {
 
 
 
-// questions visibility 
-// const questions = document.getElementsByClassName("questions_item")
-
-// const answerVisibility = document.querySelectorAll('.dsp-none');
-
-// questions.addEventListener("click", () => {
-//   document.getElementsByClassName("questions_answer").style.display==="block";
-// })
-
-// const answers = document.querySelectorAll('.questions_answer');
-
-// const answersArray = Array.from(answers);
-
-// console.log(answersArray);
-
-// function showAnswer () {
-//   answers.forEach().classList.remove('dsp-none')
-// }
 
 
+// acordion
 
 const acordionItems = Array.from(document.querySelectorAll('.acordion_item'));
 
-// const acordionAnswers = Array.from(document.querySelectorAll('.acordion_answer'));
+const arrowDown = document.querySelectorAll('.arrow-down');
 
-// acordionItems.forEach((item) =>{
-//   item.addEventListener('click',() => {
-//     acordionAnswers.forEach((el) => {
-//       if(el.classList.contains('hidden-answer')){
-//         el.classList.remove('hidden-answer');
-//       } else {
-//         el.classList.add('hidden-answer');
-//       }
-//     })
-//   })
-// })
-
-
-// acordionItems.forEach((item) => {
-//   item.addEventListener('click',() => {
-//     let answer = item.lastElementChild;
-
-//     if(answer.classList.contains('hidden-answer')){
-//       document.querySelectorAll('.acordion_answer').forEach((el) => {
-//         el.classList.add('hidden-answer')
-//       })
-//     } else {
-//       document.querySelectorAll('.acordion_answer').forEach((el) => {
-//         el.classList.add('hidden-answer');
-//       })
-//       answer.classList.remove('hidden-answer')
-//     }
-//   })
-
-// })
 
 acordionItems.forEach((item) => {
   item.addEventListener('click',() => {
     let answer = item.lastElementChild;
-
     if(answer.classList.contains('hidden-answer')){
       document.querySelectorAll('.acordion_answer').forEach((el) => {
         el.classList.add('hidden-answer');

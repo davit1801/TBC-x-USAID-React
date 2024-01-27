@@ -1,11 +1,15 @@
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 14px;
   font-style: normal;
   color: #f4f4f4;
   font-family: "TBC X";
-  position: relative;
+  /* position: relative;
   top: 0;
-  left: 0;
+  left: 0; */
 }
 
 [class*="__container"] {
@@ -13,11 +17,9 @@ body {
   margin: 0 auto;
 }
 
-/* img {
+img {
   max-width: 100%;
-} */
-
-
+}
 
 .trn-text {
   transition: all 0.4s ease;
@@ -232,6 +234,7 @@ body {
 .acordion_item{
   border-bottom: 1px solid rgb(53, 49, 49) ;
   padding: 15px 0;
+  cursor: pointer;
 
 }
 
@@ -262,6 +265,17 @@ body {
   min-height: 50px;
 }
 
+.step-list{
+  padding: 30px 20px;
+}
+
+.step-list > p {
+  margin-bottom: 10px;
+}
+
+.step-list > p > span {
+  font-weight: 700;
+}
 .acordion_question > h3 {
   font-size: 18px;
   line-height: 26px;
@@ -275,7 +289,11 @@ body {
 
 .hidden-answer{
   display: none;
-  transition: all 10s ease;
+}
+
+.arrow-rotate{
+  transition: 0.4s ease;
+  transform: rotate(180deg);
 }
 
 
