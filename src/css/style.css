@@ -17,6 +17,8 @@ body {
   max-width: 100%;
 } */
 
+
+
 .trn-text {
   transition: all 0.4s ease;
 }
@@ -206,9 +208,7 @@ body {
   /* margin-right: 100px; */
 }
 
-.previous-slide-arrow {
-  /* margin-left: 100px; */
-}
+
 
 .slides {
   display: flex;
@@ -217,14 +217,71 @@ body {
   /* height: 225px; */
 }
 
-.questions {
+
+/* Acordion questions */
+
+.acordion_questions {
   background-color: #161616;
+  padding: 75px 0 35px;
 }
 
-.faq {
+.acordion__container{
+  padding:  30px 40px ;
+}
+
+.acordion_item{
+  border-bottom: 1px solid rgb(53, 49, 49) ;
+  padding: 15px 0;
+
+}
+
+.acordion_title{
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
+
+.acordion_title h2{
+  font-size: 24px;
+}
+
+.acordion_title a{
+  font-weight: bold;
+  font-size: 20px;
+  color: #00aef3;
+}
+
+.acordion_title a:hover{
+  color: #aaaaaa;
+}
+
+.acordion_question{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 50px;
+}
+
+.acordion_question > h3 {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+
+.acordion_answer{
+  padding-bottom: 30px;
+  line-height: 28px;
+}
+
+.hidden-answer{
+  display: none;
+  transition: all 10s ease;
+}
+
+
+
+
+/* Footer */
 
 .footer {
   padding: 65px 0 45px;
