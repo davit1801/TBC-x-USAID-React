@@ -37,6 +37,18 @@ burgerNav.addEventListener("click", () => {
   header.classList.toggle("open");
 });
 
+/////////////////////////////////////
+// active link
+
+const navList = document.querySelector(".nav-menu");
+const links = document.querySelectorAll(".nav-link");
+
+links.forEach((link) => {
+  if (link.href === window.location.href) {
+    link.classList.add("active_link");
+  }
+});
+
 //////////////////////////////////////////
 // slider
 
