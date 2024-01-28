@@ -23,8 +23,20 @@
     max-width: 400px;
   }
 
+  body {
+    padding-top: 70px;
+  }
   .header.open .navigation {
     transform: translateX(-100%);
+  }
+
+  .header {
+    transition: transform 0.33s ease;
+    height: 70px;
+  }
+
+  .header.hide {
+    transform: translateY(-70px);
   }
 
   .navigation {
@@ -32,7 +44,7 @@
     top: 0;
     right: -200px;
     background-color: #222222;
-    height: 100vh;
+    min-height: 100vh;
     width: 200px;
     text-align: right;
     padding-top: 80px;

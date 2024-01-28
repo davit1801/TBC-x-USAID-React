@@ -1,11 +1,31 @@
 // header background-color change
+const header = document.querySelector(".header");
 
 window.addEventListener("scroll", function () {
   if (pageYOffset > 0) {
-    document.querySelector(".header").classList.add("active");
+    header.classList.add("active");
   } else {
-    document.querySelector(".header").classList.remove("active");
+    header.classList.remove("active");
   }
+});
+
+////////////////////////////////
+// header hide while scrolling on mobile
+
+let lastScroll = 0;
+
+const scrollPosition = () =>
+  window.pageYOffset || document.documentElement.scrollTop;
+
+const containHide = () => header.classList.contains("hide");
+
+window.addEventListener("scroll", () => {
+  if (scrollPosition() > lastScroll && !containHide()) {
+    header.classList.add("hide");
+  } else if (scrollPosition() < lastScroll && containHide()) {
+    header.classList.remove("hide");
+  }
+  lastScroll = scrollPosition();
 });
 
 //////////////////////////////
@@ -14,7 +34,7 @@ window.addEventListener("scroll", function () {
 const burgerNav = document.querySelector(".burger_menu");
 
 burgerNav.addEventListener("click", () => {
-  document.querySelector(".header").classList.toggle("open");
+  header.classList.toggle("open");
 });
 
 //////////////////////////////////////////

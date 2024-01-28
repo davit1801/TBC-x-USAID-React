@@ -7,6 +7,10 @@ body {
   font-style: normal;
   color: #f4f4f4;
   font-family: "TBC X";
+  padding-top: 84px;
+  position: relative;
+  top: 0;
+  z-index: 999;
 }
 
 [class*="__container"] {
@@ -28,7 +32,9 @@ img {
   position: fixed;
   width: 100%;
   line-height: 26px;
-  z-index: 1;
+  z-index: 5;
+  top: 0;
+  left: 0;
 }
 
 .active {
