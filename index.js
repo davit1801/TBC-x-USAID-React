@@ -8,12 +8,15 @@ window.addEventListener("scroll", function () {
   }
 });
 
-//
+
+//////////////////////////////////////////
+// slider
 const slides = document.querySelectorAll(".slides"),
   prev = document.querySelector(".previous-slide-arrow"),
-  next = document.querySelector(".next-slide-arrow");
-
-let slideIndex = 1;
+  next = document.querySelector(".next-slide-arrow"),
+  dotsArea = document.querySelector('.nav-dots'),
+  dots = document.querySelectorAll('.dot');
+  let slideIndex = 1;
 
 showSlides(slideIndex);
 
@@ -26,14 +29,36 @@ function showSlides(n) {
     slideIndex = slides.length;
   }
 
+
+
   slides.forEach((item) => (item.style.display = "none"));
 
+  dots.forEach((item) => {
+    item.classList.remove('avtive-dot')
+  })
+
   slides[slideIndex - 1].style.display = "flex";
+  dots[slideIndex -1].classList.add('active-dot');
 }
+
+
 
 function plusSlides(n) {
   showSlides((slideIndex += n));
 }
+
+function currentSlide (n) {
+  showSlides(slideIndex = n);
+}
+
+dotsArea.addEventListener("click", (e) => {
+  for(let i = 0; i < dots.length + 1; i++){
+    if(e.target.classList.contains('dot') && e.target == dots[i-1]){
+      currentSlide(i);
+    }
+  }
+})
+
 
 prev.addEventListener("click", () => {
   plusSlides(-1);
@@ -43,18 +68,20 @@ next.addEventListener("click", () => {
   plusSlides(1);
 });
 
-// function avtoSlider (btn) {
-//     let click = new CustomEvent ("click");
-//     next.dispatchEvent(click)
-// }
-
-// setInterval(avtoSlider,2000)
+function avtoSlider (btn) {
+    let click = new CustomEvent ("click");
+    next.dispatchEvent(click)
+}
 
 
-
+setInterval(avtoSlider,4000);
 
 
 
+
+
+
+/////////////////////////////////////////////////////
 // acordion
 
 const acordionItems = Array.from(document.querySelectorAll('.acordion_item'));
